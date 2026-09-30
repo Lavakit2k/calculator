@@ -1,6 +1,7 @@
 import { Icon, type IconName } from './components/Icon';
 import { href, useRoute, type Route } from './lib/router';
 import { useStore } from './lib/store';
+import { Finance } from './pages/Finance';
 import { Setup, Unlock } from './pages/Lock';
 import { Placeholder } from './pages/Placeholder';
 
@@ -16,7 +17,7 @@ const NAV: [Route, string, string, IconName][] = [
 
 const PAGES: Record<Route, () => React.JSX.Element> = {
   overview: () => <Placeholder title="Übersicht" />,
-  finance: () => <Placeholder title="Finanzen" />,
+  finance: Finance,
   time: () => <Placeholder title="Zeit" />,
   screen: () => <Placeholder title="Bildschirmzeit" />,
   goals: () => <Placeholder title="Ziele" />,
