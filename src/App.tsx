@@ -3,6 +3,7 @@ import { href, useRoute, type Route } from './lib/router';
 import { useStore } from './lib/store';
 import { Finance } from './pages/Finance';
 import { Setup, Unlock } from './pages/Lock';
+import { Time } from './pages/Time';
 import { Placeholder } from './pages/Placeholder';
 
 // [Route, Bezeichnung, Kurzform für die Bottom-Navigation, Icon]
@@ -18,7 +19,7 @@ const NAV: [Route, string, string, IconName][] = [
 const PAGES: Record<Route, () => React.JSX.Element> = {
   overview: () => <Placeholder title="Übersicht" />,
   finance: Finance,
-  time: () => <Placeholder title="Zeit" />,
+  time: Time,
   screen: () => <Placeholder title="Bildschirmzeit" />,
   goals: () => <Placeholder title="Ziele" />,
   settings: () => <Placeholder title="Einstellungen" />,
